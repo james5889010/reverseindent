@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Reverse Indentation of any source code</title>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, minimum-scale=1, maximum-scale=1">
+		<meta name="description" content="Free tool to reverse the indentation of any source code.">
+		<meta name="keywords" content="reverse, indent, indentation, source code, code, backwards, unindent, unindentation">
+		<meta name="author" content="contact@reverseindent.com">
+		
+		<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+		
+		<link href="css/bootstrap.css" rel="stylesheet">
+		<link href="css/bootstrap-responsive.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+	</head>
+
+	<body>
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="index.html">ReserveIndent.com</a>
+				</div>	
+				<div class="collapse navbar-collapse pull-right" id="navbar-collapse">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="index.html">Home</a></li>
+						<li><a href="index.html#example">Example</a></li>
+						<li><a href="index.html#contact">Contact</a></li>
+					</ul>
+				</div><!-- /.navbar-collapse -->
+			</div>	<!-- /.container-fluid -->
+		</nav>
+
+		<header>
+			<div class="page-header text-center">
+				<div class="container-fluid">
+					<br><h1>Reverse the indentation of any source code</h1><br>
+					<p><span class="btn btn-primary btn-lg btn-file">Select source code...<input type="file" id="file"></span></p>
+					<!--<p><input type="checkbox" id="addBanner" checked> Add ReverseIndent.com one line banner to output</p>-->
+					<p><small><strong>Confidential: uploaded and generated code is not saved or seen by anyone but you. </strong></small></p><Br>
+				</div>
+			</div>
+		</header>
+
+		<section id="output">
+			<div class="container-fluid">
+				<div class="panel" style="display: none; max-height: 300px; height: 300px; width: 100%" id="resultPanel">
+					<h4 class="text-center">Output</h4>
+					<div class="text-center" style="padding-bottom: 4px;">
+						<a href="#" class="btn btn-primary btn-sm" id="select-all">Select all</a>
+						<!--<a href="#" class="btn btn-primary btn-sm" id="save">Save to file</a>-->
+					</div>
+					<pre>
+						<textarea id="result" class="form-control" rows="20" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" readonly></textarea>
+					</pre>
+				</div>
+			</div>
+		</section>
+
+		<section id="example">
+			<div class="panel text-center">
+				<div class="container-fluid">
+					<h4 class="text-center">Example</h4>
+					<div class="row">
+						<div class="col-sm-6">
+							<h5><strong>Input</strong></h5>
+							<img src="./img/reverse_indentation_input_example_v0.png" alt="" class="" style="border: 1px solid black; position: relative; border-radius: 7px;"><br><br>
+						</div>
+						<div class="col-sm-6">
+							<h5><strong>Output</strong></h5>
+							<img src="./img/reverse_indentation_output_example_v0.png" alt="" class="" style="border:1px solid black; position: relative; border-radius: 7px; "><br><br>
+						</div>
+					</div>
+				</div> 
+			</div>
+		</section>
+	
+		<section id="contact">
+			<div class="panel text-center">
+				<div class="container-fluid">
+					<h4 class="text-center">Contact</h4>
+					<a href="mailto:contact@reverseindent.com" target="_blank">contact@reverseindent.com</a><br><br>
+				</div>
+			</div>
+		</section>
+		
+		<footer>
+			<div class="container">
+				<p class="text-muted text-center">
+					&copy; 
+					<script>var now = new Date(); var yr = now.getYear(); if(yr<2000) { document.write(yr+1900); } else { document.write(yr); }</script>
+				</p><br>
+			</div>	
+		</footer>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+		<script src="js/reverseindent.js"></script>
+		<script src="js/bootstrap.js"></script>
+
+		<!-- Start of StatCounter Code for Default Guide -->
+		<script type="text/javascript">
+			var sc_project=10962580; 
+			var sc_invisible=1; 
+			var sc_security="cc64d556"; 
+			var scJsHost = (("https:" == document.location.protocol) ?
+			"https://secure." : "http://www.");
+			document.write("<sc"+"ript type='text/javascript' src='" +
+			scJsHost+
+			"statcounter.com/counter/counter.js'></"+"script>");
+		</script>
+		<noscript><div class="statcounter"><a title="shopify traffic
+			stats" href="http://statcounter.com/shopify/"
+			target="_blank"><img class="statcounter"
+			src="//c.statcounter.com/10962580/0/cc64d556/1/"
+			alt="shopify traffic stats"></a></div></noscript>
+		<!-- End of StatCounter Code for Default Guide -->
+
+	</body>
+</html>
