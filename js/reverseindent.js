@@ -101,6 +101,10 @@ if (!Array.prototype.indexOf) {
 	};
 }
 
+$("#paste-button").on("click", function () {
+	$("#paste-input-container").toggle();
+});
+
 /*
   IE Doesn't have a .startsWith either?
 */
