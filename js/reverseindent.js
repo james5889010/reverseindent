@@ -105,6 +105,12 @@ $("#paste-button").on("click", function () {
 	$("#paste-input-container").toggle();
 });
 
+$("#paste-code-input").on("input", function() {
+    var inputString = $("#paste-code-input").val();
+    var inputAsArray = inputString.split("\n");
+    processAll(inputAsArray);
+});
+
 /*
   IE Doesn't have a .startsWith either?
 */
