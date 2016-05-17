@@ -11,7 +11,6 @@ document.getElementById("select-all").addEventListener('click', function () {
 
 
 function processAll(all) {
-	document.getElementById("resultPanel").style.display = "inline";
 	document.getElementById("result").innerHTML = "";
 	var numberOfTabs = []; 
 	var i =0;
@@ -21,7 +20,6 @@ function processAll(all) {
 		numberOfTabs[i] = all[i].split('\t').length; 
 	}
 	maxTabs = Math.max.apply(Math, numberOfTabs); 
-	debugger;
 	if(maxTabs == 1) {			// \t not used for tab; using 4 spaces instead
 		
 		for(i = 0; i < all.length; i++) {
@@ -65,7 +63,6 @@ function reverseIndent() {
 	reader.readAsText(file); 	
 }
 
-
 // shims from https://gist.github.com/djKianoosh/7090542
 if (!Array.prototype.indexOf) {
 	Array.prototype.indexOf = function (searchElement /*, fromIndex */ ) {
@@ -101,16 +98,6 @@ if (!Array.prototype.indexOf) {
 	};
 }
 
-$("#paste-button").on("click", function () {
-	$("#paste-input-container").toggle();
-});
-
-$("#paste-code-input").on("input", function() {
-    var inputString = $("#paste-code-input").val();
-    var inputAsArray = inputString.split("\n");
-    processAll(inputAsArray);
-});
-
 /*
   IE Doesn't have a .startsWith either?
 */
@@ -126,3 +113,13 @@ if (!String.prototype.trim) {
 		return this.replace(/^\s+|\s+$/g, '');
 	};
 }
+
+$("#paste-button").on("click", function () {
+	$("#input-output-container").toggle();
+});
+
+$("#paste-code-input").on("input", function() {
+    var inputString = $("#paste-code-input").val();
+    var inputAsArray = inputString.split("\n");
+    processAll(inputAsArray);
+});

@@ -39,34 +39,38 @@
 		</nav>
 
 		<header>
-			<div class="page-header text-center">
+			<div class="page-header text-center reverse-indent-page-header">
 				<div class="container-fluid">
 					<br><h1>Reverse the indentation of any source code</h1><br>
 					<p>
 						<span class="btn btn-primary btn-lg btn-file">Upload File<input type="file" id="file"></span>
 						<span class="btn btn-primary btn-lg btn-file" id="paste-button">Paste in Code</span>
 					</p>
-					<div <div class="panel results-and-paste-input-panel" id="paste-input-container" style="display: none">
-						<div style="text-align: left">Paste your code here:</div>
-						<textarea id="paste-code-input" rows="20"></textarea>
-					</div>
 					<!--<p><input type="checkbox" id="addBanner" checked> Add ReverseIndent.com one line banner to output</p>-->
-					<p><small><strong>Confidential: uploaded and generated code is not saved or seen by anyone but you. </strong></small></p><Br>
+					<h5><strong>Confidential: uploaded and generated code is not saved or seen by anyone but you. </strong></h5>
 				</div>
 			</div>
 		</header>
 
-		<section id="output">
+		<section id="input-output-container" style="display: none">
 			<div class="container-fluid">
-				<div class="panel result-and-paste-input-panel" id="resultPanel">
-					<h4 class="text-center">Output</h4>
-					<div class="text-center" style="padding-bottom: 4px;">
-						<a href="#" class="btn btn-primary btn-sm" id="select-all">Select all</a>
-						<!--<a href="#" class="btn btn-primary btn-sm" id="save">Save to file</a>-->
+				<div class="row"> 
+					<div class="col-sm-6"> 
+						<div class="panel">
+							<h5 style="text-align: left"><strong>Paste your code here:</strong></h5>
+							<textarea id="paste-code-input" class="form-control" rows="20"></textarea>
+						</div>
 					</div>
-					<pre>
-						<textarea id="result" class="form-control" rows="20" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" readonly></textarea>
-					</pre>
+					<div class="col-sm-6"> 
+						<div class="panel" id="resultPanel">
+							<h5>
+								<strong style="text-align: left">Output:</strong>
+								<a href="#" style="text-align: right" id="select-all">Select all</a>
+							</h5>
+							
+							<textarea id="result" class="form-control" rows="20" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" readonly>Reverse indented code will appear here</textarea>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>

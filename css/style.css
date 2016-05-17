@@ -27,17 +27,16 @@ body{
 }
 
 #paste-code-input {
-	width: 100%;
-}
-
-#paste-input-container {
-	padding-top: 10px;
-	padding-bottom: 10px;
+	min-width: 100%;
+	max-width: 100%;
 }
 
 .result-and-paste-input-panel {
-	display: none;
 	max-height: 300px;
 	height: 300px;
 	width: 100%
+}
+
+.reverse-indent-page-header {
+	padding-bottom: 0;
 }
