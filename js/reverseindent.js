@@ -16,19 +16,20 @@ function processAll(all) {
 	var numberOfTabs = []; 
 	var i =0;
 	var maxTabs = 0; 
-	
+	var useSpacedInsteadOfTabs = false;
+
 	for(i = 0; i < all.length; i++) {
 		numberOfTabs[i] = all[i].split('\t').length; 
 	}
 	maxTabs = Math.max.apply(Math, numberOfTabs); 
-	debugger;
-	if(maxTabs == 1) {			// \t not used for tab; using 4 spaces instead
-		
+	if(maxTabs == 1) {			// \t not used for tab; using leading spaces instead
+
+		useSpacedInsteadOfTabs = true;
 		for(i = 0; i < all.length; i++) {
 			numberOfTabs[i] = 0; 
-			while(all[i].startsWith("    ")) {
+			while(all[i].startsWith(" ")) {
 				numberOfTabs[i]++;
-				all[i] = all[i].substring(4, all[i].length); 
+				all[i] = all[i].substring(1, all[i].length); 
 			}
 		}
 		maxTabs = Math.max.apply(Math, numberOfTabs); 
@@ -42,7 +43,11 @@ function processAll(all) {
 		
 		var toInsert = ""; 
 		for(var j = 0; j < (maxTabs - numberOfTabs[i]); j++) {
-			toInsert += "\t"; 
+			if (useSpacedInsteadOfTabs) {
+				toInsert += " ";	
+			} else {
+				toInsert += "\t"; 
+			}
 		}	
 		
 		all[i] = toInsert + all[i]; 
